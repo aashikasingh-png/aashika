@@ -451,7 +451,8 @@ h3 {
 }
 
 .study-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  align-items: start;
 }
 
 .study {
@@ -461,15 +462,19 @@ h3 {
 
 .study a,
 .deck-link {
-  display: inline-block;
-  margin-top: auto;
-  padding-top: 0.9rem;
-  color: var(--amber-deep);
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 1.1rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--cream);
   font-weight: 560;
+  text-decoration: none;
 }
 
 .deck-link {
-  margin-top: 1.1rem;
+  margin-top: 1.2rem;
 }
 
 .savana {
@@ -599,7 +604,8 @@ h3 {
 .study a:focus-visible,
 .deck-link:hover,
 .deck-link:focus-visible {
-  color: var(--ink);
+  background: var(--amber-deep);
+  color: var(--cream);
 }
 
 .about-grid {
@@ -753,7 +759,6 @@ h3 {
   .hero,
   .story,
   .work-grid,
-  .study-grid,
   .about-grid,
   .role,
   .contact-list,
