@@ -1,33 +1,21 @@
-const screens = [...document.querySelectorAll("[data-screen]")];
+const levels = [...document.querySelectorAll(".level")];
+const playing = document.querySelector(".now-playing");
 
-const order = ["title", "map", "level-1", "level-2", "level-3", "level-4", "level-5", "level-6", "savana", "level-7"];
-
-function show(id) {
-  const name = order.includes(id) ? id : "title";
-  screens.forEach((screen) => {
-    const on = screen.dataset.screen === name;
-    screen.hidden = !on;
+function placeOnPath() {
+  if (!levels.length || !playing) return;
+  const marker = window.scrollY + 140;
+  let active = levels[0];
+  levels.forEach((level) => {
+    const top = level.getBoundingClientRect().top + window.scrollY;
+    if (top <= marker) active = level;
   });
-  window.scrollTo(0, 0);
-  const heading = document.querySelector(`[data-screen="${name}"] h1`);
-  if (heading) {
-    heading.setAttribute("tabindex", "-1");
-    heading.focus({ preventScroll: true });
-  }
+  const atEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8;
+  if (atEnd) active = levels[levels.length - 1];
+  playing.textContent = active.dataset.title || "";
 }
 
-function route() {
-  const id = (location.hash || "#title").slice(1);
-  show(id);
+if (playing) {
+  placeOnPath();
+  window.addEventListener("scroll", placeOnPath, { passive: true });
+  window.addEventListener("resize", placeOnPath);
 }
-
-window.addEventListener("hashchange", route);
-route();
-
-document.addEventListener("keydown", (event) => {
-  if (event.key !== "Escape") return;
-  const current = (location.hash || "#title").slice(1);
-  if (current === "title" || current === "map") return;
-  if (current === "savana") location.hash = "#level-6";
-  else location.hash = "#map";
-});
