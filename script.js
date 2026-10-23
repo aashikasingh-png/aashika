@@ -31,10 +31,56 @@ if (!reduceMotion && "IntersectionObserver" in window) {
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
+    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
   );
 
   document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 } else {
   document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-in"));
 }
+
+const levels = [...document.querySelectorAll("[data-level]")];
+const nodes = [...document.querySelectorAll(".map-node")];
+const fill = document.getElementById("map-fill");
+const playing = document.getElementById("now-playing");
+
+function placeOnPath() {
+  if (!levels.length) return;
+  const marker = window.scrollY + 150;
+  let active = 0;
+  levels.forEach((level, index) => {
+    const top = level.getBoundingClientRect().top + window.scrollY;
+    if (top <= marker) active = index;
+  });
+
+  const atEnd =
+    window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8;
+  if (atEnd) active = levels.length - 1;
+
+  nodes.forEach((node, index) => {
+    node.classList.toggle("is-on", index <= active);
+    node.classList.toggle("is-here", index === active);
+    if (index === active) node.setAttribute("aria-current", "true");
+    else node.removeAttribute("aria-current");
+  });
+
+  if (playing) playing.textContent = levels[active].dataset.title || "";
+
+  if (fill && nodes.length > 1) {
+    const first = nodes[0].querySelector("b");
+    const last = nodes[nodes.length - 1].querySelector("b");
+    const current = nodes[active].querySelector("b");
+    if (first && last && current) {
+      const start = first.getBoundingClientRect().left;
+      const end = last.getBoundingClientRect().left;
+      const here = current.getBoundingClientRect().left;
+      const span = end - start;
+      const ratio = span > 0 ? (here - start) / span : 0;
+      fill.style.width = `${Math.min(1, Math.max(0, ratio)) * 100}%`;
+    }
+  }
+}
+
+placeOnPath();
+window.addEventListener("scroll", placeOnPath, { passive: true });
+window.addEventListener("resize", placeOnPath);
