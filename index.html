@@ -6,13 +6,13 @@
     <title>Aashika Singh: The Product Saga</title>
     <meta
       name="description"
-      content="Aashika Singh is an Associate Product Manager at FloBiz (myBillBook). Her product saga runs from IGDTUW to PayU, Finstack, and AI products for Indian small businesses."
+      content="Play Aashika Singh's product saga: seven levels from IGDTUW to PayU, Finstack, Crework, and FloBiz."
     />
     <meta name="author" content="Aashika Singh" />
     <meta property="og:title" content="Aashika Singh: The Product Saga" />
     <meta
       property="og:description"
-      content="A journey in seven levels: campus, PayU, Finstack, Crework, FloBiz, side quests, and the next role."
+      content="A game in seven levels: campus, PayU, Finstack, Crework, FloBiz, side quests, and the next role."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="portrait.jpg" />
@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,520;0,9..144,640;1,9..144,520&family=Outfit:wght@340;420;520;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Orbitron:wght@500;700&family=Russo+One&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -29,486 +29,546 @@
     </script>
   </head>
   <body>
-    <a class="skip" href="#level-1">Skip to the saga</a>
+    <a class="skip" href="#map">Skip to the saga map</a>
 
-    <header class="site-header">
-      <div class="bar">
-        <a class="brand" href="#top">Aashika</a>
-        <p class="now-playing" id="now-playing">Level 01: Campus</p>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-          <span></span>
-          <span></span>
-        </button>
-        <nav class="nav" id="site-nav" aria-label="Primary">
-          <a href="#level-5">FloBiz</a>
-          <a href="#level-6">Quests</a>
-          <a class="nav-cta" href="#level-7">Open to roles</a>
-        </nav>
-      </div>
-      <nav class="quest-map" aria-label="Saga levels">
-        <ol>
-          <li><a class="map-node" href="#level-1"><b>01</b><span>Campus</span></a></li>
-          <li><a class="map-node" href="#level-2"><b>02</b><span>PayU</span></a></li>
-          <li><a class="map-node" href="#level-3"><b>03</b><span>Finstack</span></a></li>
-          <li><a class="map-node" href="#level-4"><b>04</b><span>Crework</span></a></li>
-          <li><a class="map-node" href="#level-5"><b>05</b><span>FloBiz</span></a></li>
-          <li><a class="map-node" href="#level-6"><b>06</b><span>Quests</span></a></li>
-          <li><a class="map-node" href="#level-7"><b>07</b><span>Gate</span></a></li>
-        </ol>
-        <div class="map-track" aria-hidden="true"><div class="map-fill" id="map-fill"></div></div>
-      </nav>
-    </header>
-
-    <main id="top">
-      <section class="hero" aria-labelledby="name">
-        <div class="hero-copy">
-          <p class="eyebrow">
-            <img class="avatar" src="portrait.jpg" alt="Aashika Singh at her IGDTUW convocation" width="64" height="64" />
-            <span>A saga in seven levels · Bangalore</span>
-          </p>
-          <h1 id="name">
-            The product
-            <em>saga</em>
-          </h1>
-          <p class="lede">
-            Aashika Singh. From the classroom at IGDTUW, through payments at PayU and credit at Finstack, to AI products for the small businesses on FloBiz (myBillBook).
-          </p>
-          <p class="belief">
-            Great products aren’t built by technology alone. They’re built by understanding the right problems, and solving them in ways that last.
-          </p>
-          <div class="hero-actions">
-            <a class="button" href="#level-1">Begin the saga</a>
-            <a class="button button-ghost" href="mailto:aashikapm884@gmail.com">Email</a>
-            <a class="button button-ghost" href="https://www.linkedin.com/in/aashika7" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </div>
-          <ul class="path">
-            <li>APM at FloBiz</li>
-            <li>Ex-SDE at PayU</li>
-            <li>Ex-TPM at Finstack</li>
+    <section class="screen" id="title" data-screen="title">
+      <div class="title-layout">
+        <div class="portrait-frame">
+          <img src="portrait.jpg" alt="Aashika Singh at her IGDTUW convocation" width="280" height="280" />
+          <p class="portrait-tag">Player</p>
+        </div>
+        <div class="title-copy">
+          <p class="hud-label">Aashika Singh · Bangalore</p>
+          <h1>The product saga</h1>
+          <p class="title-line">Seven levels. One player. Level 5 is live.</p>
+          <ul class="player-stats">
+            <li><span>Class</span><strong>APM at FloBiz</strong></li>
+            <li><span>Former</span><strong>SDE at PayU</strong></li>
+            <li><span>Former</span><strong>TPM at Finstack</strong></li>
           </ul>
+          <div class="title-actions">
+            <a class="btn btn-gold" href="#map">Enter the saga</a>
+            <a class="btn btn-ghost" href="mailto:aashikapm884@gmail.com">Email</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/aashika7" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="map" data-screen="map" hidden>
+      <header class="topbar">
+        <a class="brand" href="#title">Aashika</a>
+        <p class="hud-label">Saga map · Level 5 is live</p>
+        <a class="btn btn-ghost btn-small" href="mailto:aashikapm884@gmail.com">Email</a>
+      </header>
+      <div class="map-wrap">
+        <div class="map-intro">
+          <p class="hud-label">Select a level</p>
+          <h1>The saga</h1>
+          <p>Walk the path in order, or jump to any level that is already cleared.</p>
+        </div>
+        <ol class="world">
+          <li>
+            <a class="stage cleared" href="#level-1">
+              <b>1</b>
+              <span>
+                <small>Level 1</small>
+                <strong>Campus</strong>
+                <em>IGDTUW · 2018 to 2022</em>
+              </span>
+              <i>Cleared</i>
+            </a>
+          </li>
+          <li>
+            <a class="stage cleared" href="#level-2">
+              <b>2</b>
+              <span>
+                <small>Level 2</small>
+                <strong>PayU</strong>
+                <em>Software engineer · 2022 to 2024</em>
+              </span>
+              <i>Cleared</i>
+            </a>
+          </li>
+          <li>
+            <a class="stage cleared" href="#level-3">
+              <b>3</b>
+              <span>
+                <small>Level 3</small>
+                <strong>Finstack</strong>
+                <em>Technical product manager</em>
+              </span>
+              <i>Cleared</i>
+            </a>
+          </li>
+          <li>
+            <a class="stage cleared" href="#level-4">
+              <b>4</b>
+              <span>
+                <small>Level 4</small>
+                <strong>Crework</strong>
+                <em>PM fellowship · rank 1</em>
+              </span>
+              <i>Cleared</i>
+            </a>
+          </li>
+          <li>
+            <a class="stage now" href="#level-5">
+              <b>5</b>
+              <span>
+                <small>Level 5</small>
+                <strong>FloBiz</strong>
+                <em>Associate product manager · now</em>
+              </span>
+              <i>Playing</i>
+            </a>
+          </li>
+          <li>
+            <a class="stage side" href="#level-6">
+              <b>6</b>
+              <span>
+                <small>Level 6</small>
+                <strong>Side quests</strong>
+                <em>Case studies</em>
+              </span>
+              <i>Open</i>
+            </a>
+          </li>
+          <li>
+            <a class="stage gate" href="#level-7">
+              <b>7</b>
+              <span>
+                <small>Level 7</small>
+                <strong>The gate</strong>
+                <em>APM and PM roles</em>
+              </span>
+              <i>Open</i>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="screen level" id="level-1" data-screen="level-1" data-index="1" hidden>
+      <header class="topbar">
+        <a href="#map">Saga map</a>
+        <p class="hud-label">Level 1 of 7</p>
+        <a class="btn btn-gold btn-small" href="#level-2">Level 2</a>
+      </header>
+      <article class="board">
+        <p class="giant" aria-hidden="true">1</p>
+        <p class="hud-label">Cleared</p>
+        <h1>Level 1: Campus</h1>
+        <p class="where">IGDTUW, Delhi · 2018 to 2022</p>
+        <p class="mission">Objective: learn how systems work, then lead the rooms around them.</p>
+        <p>B.Tech in Electronics and Communication Engineering. 8.2 GPA.</p>
+        <ul class="drops">
+          <li><strong>IEEE</strong><span>Vice Chairperson</span></li>
+          <li><strong>ECE</strong><span>Association Secretary</span></li>
+          <li><strong>OS</strong><span>Teaching Assistant</span></li>
+          <li><strong>Robotics</strong><span>Club Team Lead</span></li>
+        </ul>
+        <div class="level-nav">
+          <a class="btn btn-ghost" href="#map">Back to saga</a>
+          <a class="btn btn-gold" href="#level-2">Continue to Level 2</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="screen level" id="level-2" data-screen="level-2" data-index="2" hidden>
+      <header class="topbar">
+        <a href="#level-1">Level 1</a>
+        <p class="hud-label">Level 2 of 7</p>
+        <a class="btn btn-gold btn-small" href="#level-3">Level 3</a>
+      </header>
+      <article class="board">
+        <p class="giant" aria-hidden="true">2</p>
+        <p class="hud-label">Cleared</p>
+        <h1>Level 2: PayU</h1>
+        <p class="where">Software Engineer · Bangalore · Jan 2022 to Apr 2024</p>
+        <p class="mission">Objective: ship the payments systems, and keep asking why the ticket exists.</p>
+        <ul class="log">
+          <li>Built dynamic web apps with modular design and automated pipelines, shortening development cycles by 70%. Quality gates ran on JUnit and Mockito.</li>
+          <li>Developed REST APIs that improved transaction efficiency by 30% and strengthened platform security by 95%.</li>
+          <li>Took a product from scratch with an eye on scale, security, and Kong API management.</li>
+          <li>Cut downtime by 10% and held the service at 88% uptime.</li>
+        </ul>
+        <ul class="drops">
+          <li><strong>70%</strong><span>faster cycles</span></li>
+          <li><strong>30%</strong><span>transaction efficiency</span></li>
+          <li><strong>95%</strong><span>stronger security</span></li>
+          <li><strong>88%</strong><span>uptime</span></li>
+        </ul>
+        <div class="level-nav">
+          <a class="btn btn-ghost" href="#level-1">Level 1</a>
+          <a class="btn btn-gold" href="#level-3">Continue to Level 3</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="screen level" id="level-3" data-screen="level-3" data-index="3" hidden>
+      <header class="topbar">
+        <a href="#level-2">Level 2</a>
+        <p class="hud-label">Level 3 of 7</p>
+        <a class="btn btn-gold btn-small" href="#level-4">Level 4</a>
+      </header>
+      <article class="board">
+        <p class="giant" aria-hidden="true">3</p>
+        <p class="hud-label">Cleared</p>
+        <h1>Level 3: Finstack</h1>
+        <p class="where">Technical Product Manager · Bangalore · Apr 2024 to Jul 2024</p>
+        <p class="mission">Objective: take the first product seat, next to the CEO and CTO.</p>
+        <ul class="log">
+          <li>Worked with the CEO and CTO on business requirements, design decisions, and a decision engine for onboarding.</li>
+          <li>Shaped a customer onboarding and creditworthiness platform that cut paperwork by 50%.</li>
+          <li>Owned product for a PPI management suite on M2P, Livquik, and Syntizen, and took an API wrapper live: cutting build time by 70% with dynamic web apps.</li>
+        </ul>
+        <ul class="drops">
+          <li><strong>−50%</strong><span>paperwork</span></li>
+          <li><strong>−70%</strong><span>build time</span></li>
+        </ul>
+        <div class="level-nav">
+          <a class="btn btn-ghost" href="#level-2">Level 2</a>
+          <a class="btn btn-gold" href="#level-4">Continue to Level 4</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="screen level" id="level-4" data-screen="level-4" data-index="4" hidden>
+      <header class="topbar">
+        <a href="#level-3">Level 3</a>
+        <p class="hud-label">Level 4 of 7</p>
+        <a class="btn btn-gold btn-small" href="#level-5">Level 5</a>
+      </header>
+      <article class="board">
+        <p class="giant" aria-hidden="true">4</p>
+        <p class="hud-label">Cleared · Rank 1</p>
+        <h1>Level 4: Crework</h1>
+        <p class="where">Product Management Fellowship · Bangalore · Aug 2024 to Oct 2024</p>
+        <p class="mission">Objective: put the engineering, the customer, and the business outcome in the same job.</p>
+        <p>
+          After PayU, the questions that stayed were larger than the ticket: why are we building this, which user problem does it solve, and how do we know it moved the business? That curiosity is what pulled the work into product. The cohort finished at rank 1. The side quests in Level 6 are the writing from that stretch.
+        </p>
+        <p class="signoff">Always curious. Always building. Always learning.</p>
+        <div class="level-nav">
+          <a class="btn btn-ghost" href="#level-3">Level 3</a>
+          <a class="btn btn-gold" href="#level-5">Continue to Level 5</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="screen level" id="level-5" data-screen="level-5" data-index="5" hidden>
+      <header class="topbar">
+        <a href="#level-4">Level 4</a>
+        <p class="hud-label">Level 5 of 7 · now playing</p>
+        <a class="btn btn-gold btn-small" href="#level-6">Level 6</a>
+      </header>
+      <article class="board">
+        <p class="giant" aria-hidden="true">5</p>
+        <p class="hud-label hot">Now playing</p>
+        <h1>Level 5: FloBiz</h1>
+        <p class="where">Associate Product Manager · myBillBook · Bangalore · Aug 2024 to Present</p>
+        <p class="mission">Objective: take products from discovery to adoption for Indian small businesses.</p>
+        <p>
+          Great products aren’t built by technology alone. They’re built by understanding the right problems, and solving them in ways that last. This level is 0 to 1 AI collections and reconciliation, growth systems, and the loops that decide whether a feature is actually used. The work sits with design, engineering, and GTM.
+        </p>
+        <ul class="log">
+          <li>Built internal growth and AI platforms, including an in-house voice agent and a CleverTap-style engagement engine, so other teams could launch and tune journeys themselves.</li>
+          <li>Led 0 to 1 discovery and pilot execution for myCashFlo.AI, from design and user testing through QA.</li>
+          <li>Shipped AI Recon and regional invoice themes, then instrumented usage, A/B tests, WhatsApp nudges, and in-app tips to see what actually stuck.</li>
+          <li>Ran GTM and customer discovery across 300+ customers and 45+ SMBs to test demand, pricing, and partnerships.</li>
+        </ul>
+        <h2>Encounters</h2>
+        <div class="encounters">
+          <article>
+            <p class="hud-label">Encounter 1</p>
+            <h3>AI Recon</h3>
+            <p>A generative AI reconciliation tool that matches bank statements to invoices. It launched at <strong>75%+ accuracy</strong> and cut manual checks per statement by <strong>60%</strong>.</p>
+          </article>
+          <article>
+            <p class="hud-label">Encounter 2</p>
+            <h3>myCashFlo.AI</h3>
+            <p>An AI payment-collections product in discovery. Early testing shows a <strong>40% renewal rate</strong>, promise-to-pay capture up <strong>20%</strong>, and collection time down <strong>15%</strong>. The pilot reached 100+ users with a WhatsApp delivery rate above <strong>75%</strong>.</p>
+          </article>
+          <article>
+            <p class="hud-label">Encounter 3</p>
+            <h3>Invoice themes</h3>
+            <p>Auto-suggested seasonal and regional invoice themes. Template adoption grew <strong>40%</strong>, and repeat invoicing rose <strong>15%</strong> in the first week.</p>
+          </article>
+          <article>
+            <p class="hud-label">Encounter 4</p>
+            <h3>Onboarding and adoption</h3>
+            <p>Shared Ledgers cut adjustment tickets by <strong>30%</strong>. OCR invoice capture takes time off every bill. Onboarding drop-off fell <strong>18%</strong>. A/B tests and in-app nudges lifted trial-to-paid conversion by <strong>8 pp</strong> and repeat feature usage by <strong>10 pp</strong>. Cash Flow Discovery held a <strong>20–26% CTR</strong>.</p>
+          </article>
+        </div>
+        <div class="level-nav">
+          <a class="btn btn-ghost" href="#level-4">Level 4</a>
+          <a class="btn btn-gold" href="#level-6">Continue to Level 6</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="screen level" id="level-6" data-screen="level-6" data-index="6" hidden>
+      <header class="topbar">
+        <a href="#level-5">Level 5</a>
+        <p class="hud-label">Level 6 of 7</p>
+        <a class="btn btn-gold btn-small" href="#level-7">Level 7</a>
+      </header>
+      <article class="board">
+        <p class="giant" aria-hidden="true">6</p>
+        <p class="hud-label">Side quests</p>
+        <h1>Level 6: Side quests</h1>
+        <p class="mission">Objective: product thinking, written down. Pick a quest. Each one opens the full write-up.</p>
+        <div class="quest-board">
+          <a class="quest main" href="#savana">
+            <small>Main quest · Fashion: D2C</small>
+            <strong>Savana</strong>
+            <span>Trend velocity, social commerce, and a mobile-first shop for Gen Z in India’s D2C market.</span>
+            <em>Enter quest</em>
+          </a>
+          <a class="quest" href="https://balanced-nephew-874.notion.site/p/AI-Led-Daily-Joy-Value-for-Elders-2e236817787e8064bd3cf87818c572a1" target="_blank" rel="noopener noreferrer">
+            <small>Elders: AI</small>
+            <strong>Marzi Moments</strong>
+            <span>A daily companion ritual for people aged 55 to 75. Loneliness here is a lack of being noticed.</span>
+            <em>Open quest</em>
+          </a>
+          <a class="quest" href="https://bhavyaaaxdesign.notion.site/Peerlist-x-Crework-Graduation-Project-1194afb99807805b81c3f6bcd02f07c4" target="_blank" rel="noopener noreferrer">
+            <small>With Bhavya and Aditi</small>
+            <strong>Peerlist</strong>
+            <span>Raise daily active users 30% in a quarter and lift time per session 25%.</span>
+            <em>Open quest</em>
+          </a>
+          <a class="quest" href="cases/leap-wallet.pdf" target="_blank" rel="noopener noreferrer">
+            <small>Web3: growth</small>
+            <strong>Leap Wallet</strong>
+            <span>Growth channels for a crypto wallet, with metrics by day, week, and month, and a download journey by source.</span>
+            <em>Open quest</em>
+          </a>
+          <a class="quest" href="cases/white-panda.pdf" target="_blank" rel="noopener noreferrer">
+            <small>Sales enablement</small>
+            <strong>White Panda</strong>
+            <span>Early-adopter research for Passion Bits. Whatfix is the starting fit, then SaaS, enterprise, consulting, finance, healthcare, and manufacturing.</span>
+            <em>Open quest</em>
+          </a>
+          <a class="quest" href="cases/product-space.pdf" target="_blank" rel="noopener noreferrer">
+            <small>Edtech: growth</small>
+            <strong>Product Space</strong>
+            <span>Awareness and acquisition for a product-management course, with separate paths for professionals and students.</span>
+            <em>Open quest</em>
+          </a>
+          <a class="quest" href="cases/slice-bank-statements.pdf" target="_blank" rel="noopener noreferrer">
+            <small>Fintech: PRD</small>
+            <strong>Slice bank statements</strong>
+            <span>Bring North East Small Finance Bank savings statements into the Slice app: view, download, search, categorize, and alerts.</span>
+            <em>Open quest</em>
+          </a>
+          <a class="quest" href="https://lime-polka-abf.notion.site/590c394bf07548b0806988695d4cdaca" target="_blank" rel="noopener noreferrer">
+            <small>Games</small>
+            <strong>Clash Rumble</strong>
+            <span>A roadmap, an art-asset model across a 9-month build and a 6-month soft launch, and a design specification.</span>
+            <em>Open quest</em>
+          </a>
+        </div>
+        <div class="level-nav">
+          <a class="btn btn-ghost" href="#level-5">Level 5</a>
+          <a class="btn btn-gold" href="#level-7">Continue to Level 7</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="screen level" id="savana" data-screen="savana" data-index="6" hidden>
+      <header class="topbar">
+        <a href="#level-6">Level 6</a>
+        <p class="hud-label">Side quest · Savana</p>
+        <a class="btn btn-gold btn-small" href="cases/savana.pdf" target="_blank" rel="noopener noreferrer">Full deck</a>
+      </header>
+      <article class="board dossier">
+        <p class="hud-label">Main quest · Fashion: D2C</p>
+        <h1>Savana</h1>
+        <p class="mission">How a digital-first fashion brand uses trend velocity, social commerce, and a mobile-first shop to win Gen Z’s attention in India’s D2C market.</p>
+
+        <h2>Why Savana</h2>
+        <p>Savana is where fashion retail in India is heading: a digital-first, Gen Z brand with a strong presence at home and a read on international trends. Design, pricing psychology, and loyalty have to work as one system if growth is going to last.</p>
+        <ul class="log">
+          <li><strong>Trend velocity:</strong> rapid design-to-launch cycles</li>
+          <li><strong>Social commerce:</strong> influencer-led discovery</li>
+          <li><strong>Mobile-first shopping:</strong> an app-centric experience</li>
+        </ul>
+
+        <h2>What Savana actually does</h2>
+        <div class="encounters">
+          <article>
+            <h3>Fast fashion launch</h3>
+            <p>Trend-led apparel inspired by global runways and social media, refreshed fast enough that the catalogue stays current.</p>
+          </article>
+          <article>
+            <h3>Direct to consumer</h3>
+            <p>Sold through the mobile app, without middlemen, so pricing stays competitive and the brand keeps the customer experience.</p>
+          </article>
+          <article>
+            <h3>Data-driven discovery</h3>
+            <p>Social, creators, and analytics decide which trends to chase, then targeted content creates the demand.</p>
+          </article>
+        </div>
+        <p>In simple terms: Savana brings international runway and social trends to Indian shoppers quickly, and at a price they can pay.</p>
+
+        <h2>The problems it solves</h2>
+        <div class="encounters">
+          <article>
+            <h3>Trend lag</h3>
+            <p>Trends move faster than traditional brands. By the time a store stocks the style, Gen Z has moved on.</p>
+          </article>
+          <article>
+            <h3>Discovery mismatch</h3>
+            <p>Offline retail does not match how this shopper finds clothes. Inspiration is on Instagram, Pinterest, and TikTok, not in a mall.</p>
+          </article>
+          <article>
+            <h3>Access barriers</h3>
+            <p>International fashion feels expensive, hard to import, or simply not available in India.</p>
+          </article>
+          <article>
+            <h3>Style versus affordability</h3>
+            <p>Affordable fashion in India often misses the trend. Premium brands have the design, and stay out of reach.</p>
+          </article>
+        </div>
+        <blockquote>“I want trendy, global-looking clothes that are affordable and easy to buy online.”</blockquote>
+
+        <h2>Who it is for</h2>
+        <p>Gen Z and young millennials, about 18 to 30. Digital natives who expect the app to feel effortless. They care about being on trend and still shop inside a young Indian budget. They find looks through influencers on Instagram and Pinterest and want to recreate them.</p>
+        <p>The insight: Savana is not only selling clothes. It is selling identity, aspiration, and cultural relevance.</p>
+
+        <h2>What makes it a strong product</h2>
+        <div class="encounters">
+          <article>
+            <h3>Trend velocity</h3>
+            <p>Rapid design-to-launch, with a catalogue that mirrors Instagram, TikTok, and Pinterest in near real time. It feels current, not seasonal.</p>
+          </article>
+          <article>
+            <h3>Mobile-first</h3>
+            <p>Discovery, wishlist, checkout, and payment live in the app. Push notifications cover drops, offers, and restocks.</p>
+          </article>
+          <article>
+            <h3>Coupons as product</h3>
+            <p>A coupon is waiting almost every time the app opens. Predictable discounts lower checkout hesitation and create a small win before the purchase.</p>
+          </article>
+        </div>
+        <p>Savana Club is the loyalty engine: Explorer, Enthusiast, Insider, then Icon. Icon perks include shopping rewards, member pricing, birthday surprises, VIP service, and “Get Me to US,” an aspirational travel hook.</p>
+
+        <h2>The growth loop</h2>
+        <ol class="chain">
+          <li>Social discovery</li>
+          <li>App visit</li>
+          <li>Coupon-driven purchase</li>
+          <li>Club progression</li>
+          <li>Referrals</li>
+        </ol>
+        <p>Discovery leads to purchase, purchase builds loyalty, and loyalty brings the next user in.</p>
+
+        <h2>What I would build next</h2>
+        <p>Standard delivery is about 21 days, which breaks the impulse that fashion depends on. The catalogue is also still focused on women.</p>
+        <div class="encounters">
+          <article>
+            <h3>1: 60-minute express</h3>
+            <p>Metro-first delivery for high-demand SKUs, through dark stores.</p>
+          </article>
+          <article>
+            <h3>2: Buy the Look</h3>
+            <p>One tap to purchase a full influencer-curated outfit.</p>
+          </article>
+          <article>
+            <h3>3: Men’s fashion</h3>
+            <p>Capsule drops first: streetwear, casual, party. Test demand with influencers before a full expansion.</p>
+          </article>
         </div>
 
-        <aside class="statement" aria-label="Cleared so far">
-          <header class="statement-head">
-            <span>Cleared so far</span>
-            <span>Level 05 is live</span>
-          </header>
-          <ul>
-            <li>
-              <span>AI Recon accuracy at launch</span>
-              <strong>75%+</strong>
-            </li>
-            <li>
-              <span>Fewer manual checks per statement</span>
-              <strong>−60%</strong>
-            </li>
-            <li>
-              <span>Invoice template adoption</span>
-              <strong>+40%</strong>
-            </li>
-            <li>
-              <span>Trial to paid conversion</span>
-              <strong>+8 pp</strong>
-            </li>
-            <li>
-              <span>Customer conversations</span>
-              <strong>300+</strong>
-            </li>
-            <li>
-              <span>Crework PM fellowship</span>
-              <strong>#1</strong>
-            </li>
-          </ul>
-        </aside>
-      </section>
+        <h2>Takeaway</h2>
+        <p>Savana works because it solves global fashion access for budget-conscious Indian shoppers, it understands Gen Z, and it joins trends, pricing psychology, loyalty, and technology.</p>
+        <ul class="log">
+          <li><strong>Return rate:</strong> where sizing, fit, or quality is hurting trust and margin</li>
+          <li><strong>Coupon usage:</strong> whether people stay for the discount or for the brand</li>
+          <li><strong>Referral-driven CAC:</strong> how referrals compare with paid acquisition</li>
+          <li><strong>Repeat purchase rate:</strong> whether each loyalty tier actually builds a habit</li>
+        </ul>
+        <div class="level-nav">
+          <a class="btn btn-ghost" href="#level-6">Back to Level 6</a>
+          <a class="btn btn-gold" href="cases/savana.pdf" target="_blank" rel="noopener noreferrer">Read the full deck</a>
+        </div>
+      </article>
+    </section>
 
-      <div class="saga">
-        <section class="level" id="level-1" data-level data-title="Level 01: Campus">
-          <div class="level-mark" aria-hidden="true"><span>01</span></div>
-          <div class="level-body reveal">
-            <p class="status status-cleared">Cleared</p>
-            <h2>Campus</h2>
-            <p class="level-place">IGDTUW, Delhi · 2018 to 2022</p>
-            <p>
-              B.Tech in Electronics and Communication Engineering, 8.2 GPA. The first level was learning how systems actually work, then leading the rooms around them.
-            </p>
-            <ul class="rewards">
-              <li>Vice Chairperson, IEEE</li>
-              <li>Secretary, ECE Association</li>
-              <li>Teaching Assistant, Operating Systems</li>
-              <li>Team Lead, Robotics Club</li>
+    <section class="screen level" id="level-7" data-screen="level-7" data-index="7" hidden>
+      <header class="topbar">
+        <a href="#level-6">Level 6</a>
+        <p class="hud-label">Level 7 of 7</p>
+        <a class="btn btn-ghost btn-small" href="#map">Saga map</a>
+      </header>
+      <article class="board">
+        <p class="giant" aria-hidden="true">7</p>
+        <p class="hud-label hot">The gate is open</p>
+        <h1>Level 7: The gate</h1>
+        <p class="mission">Objective: APM and PM roles. Someone who can sit with customers, write the spec, and still read the API.</p>
+        <div class="gate-grid">
+          <div class="panel">
+            <h2>Loadout</h2>
+            <p class="hud-label">Product and research</p>
+            <ul class="pills">
+              <li>User interviews</li>
+              <li>A/B testing</li>
+              <li>Amplitude</li>
+              <li>CleverTap</li>
+              <li>Google Analytics</li>
+              <li>Metabase</li>
+              <li>Houseware</li>
+              <li>Figma</li>
+              <li>Whimsical</li>
+            </ul>
+            <p class="hud-label">From the engineering years</p>
+            <ul class="pills">
+              <li>Java</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Spring Boot</li>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+              <li>Kong</li>
+              <li>Postman</li>
             </ul>
           </div>
-        </section>
-
-        <section class="level" id="level-2" data-level data-title="Level 02: PayU">
-          <div class="level-mark" aria-hidden="true"><span>02</span></div>
-          <div class="level-body reveal">
-            <p class="status status-cleared">Cleared</p>
-            <h2>The payments floor</h2>
-            <p class="level-place">Software Engineer · PayU · Bangalore · Jan 2022 to Apr 2024</p>
-            <p>
-              Over two years building software, developing APIs, and solving hard engineering problems. The questions that stayed were larger than the ticket: why are we building this, which user problem does it solve, and how do we know it moved the business?
-            </p>
-            <ul class="bullets">
-              <li>Built dynamic web apps with modular design and automated pipelines, shortening development cycles by 70%. Quality gates ran on JUnit and Mockito.</li>
-              <li>Developed REST APIs that improved transaction efficiency by 30% and strengthened platform security by 95%.</li>
-              <li>Took a product from scratch with an eye on scale, security, and Kong API management.</li>
-              <li>Cut downtime by 10% and held the service at 88% uptime.</li>
+          <div class="panel">
+            <h2>Walk through</h2>
+            <ul class="contact">
+              <li>
+                <span>Email</span>
+                <a href="mailto:aashikapm884@gmail.com">aashikapm884@gmail.com</a>
+              </li>
+              <li>
+                <span>Phone</span>
+                <a href="tel:+919871757442">+91 98717 57442</a>
+              </li>
+              <li>
+                <span>LinkedIn</span>
+                <a href="https://www.linkedin.com/in/aashika7" target="_blank" rel="noopener noreferrer">linkedin.com/in/aashika7</a>
+              </li>
+              <li>
+                <span>Base</span>
+                <strong>Bangalore, India</strong>
+              </li>
             </ul>
-            <ul class="loot" aria-label="What this level cleared">
-              <li><strong>70%</strong><span>faster cycles</span></li>
-              <li><strong>30%</strong><span>transaction efficiency</span></li>
-              <li><strong>95%</strong><span>stronger security</span></li>
-              <li><strong>88%</strong><span>uptime</span></li>
-            </ul>
+            <a class="btn btn-gold" href="mailto:aashikapm884@gmail.com">Email</a>
           </div>
-        </section>
+        </div>
+        <p class="fine">
+          <a href="https://lime-polka-abf.notion.site/9a37559e352d484a8141e010d710416d" target="_blank" rel="noopener noreferrer">Notion resume</a>
+        </p>
+        <div class="level-nav">
+          <a class="btn btn-ghost" href="#level-6">Level 6</a>
+          <a class="btn btn-gold" href="#map">Back to the saga</a>
+        </div>
+      </article>
+    </section>
 
-        <section class="level" id="level-3" data-level data-title="Level 03: Finstack">
-          <div class="level-mark" aria-hidden="true"><span>03</span></div>
-          <div class="level-body reveal">
-            <p class="status status-cleared">Cleared</p>
-            <h2>The credit desk</h2>
-            <p class="level-place">Technical Product Manager · Finstack · Bangalore · Apr 2024 to Jul 2024</p>
-            <p>
-              The first product seat. Sitting with the CEO and CTO, turning a credit and onboarding problem into something a team could ship.
-            </p>
-            <ul class="bullets">
-              <li>Worked with the CEO and CTO on business requirements, design decisions, and a decision engine for onboarding.</li>
-              <li>Shaped a customer onboarding and creditworthiness platform that cut paperwork by 50%.</li>
-              <li>Owned product for a PPI management suite on M2P, Livquik, and Syntizen, and took an API wrapper live: cutting build time by 70% with dynamic web apps.</li>
-            </ul>
-            <ul class="loot" aria-label="What this level cleared">
-              <li><strong>−50%</strong><span>paperwork</span></li>
-              <li><strong>−70%</strong><span>build time</span></li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="level" id="level-4" data-level data-title="Level 04: Crework">
-          <div class="level-mark" aria-hidden="true"><span>04</span></div>
-          <div class="level-body reveal">
-            <p class="status status-cleared">Cleared · Rank 1</p>
-            <h2>The fellowship</h2>
-            <p class="level-place">Product Management Fellowship · Crework, Bangalore · Aug 2024 to Oct 2024</p>
-            <p>
-              That curiosity is what pulled the work into product: the technical work, the customer understanding, and the business outcome in the same job. The cohort finished with rank 1. The side quests further down are the writing from that stretch.
-            </p>
-            <p class="signoff">Always curious. Always building. Always learning.</p>
-          </div>
-        </section>
-
-        <section class="level level-now" id="level-5" data-level data-title="Level 05: FloBiz">
-          <div class="level-mark" aria-hidden="true"><span>05</span></div>
-          <div class="level-body">
-            <p class="status status-now">Now playing</p>
-            <h2>FloBiz</h2>
-            <p class="level-place">Associate Product Manager · myBillBook · Bangalore · Aug 2024 to Present</p>
-            <p class="reveal">
-              The current level. Discovery to adoption for Indian small businesses: 0 to 1 AI collections and reconciliation, growth systems, and the unglamorous loops that decide whether a feature is actually used. The work sits with design, engineering, and GTM.
-            </p>
-            <ul class="bullets reveal">
-              <li>Built internal growth and AI platforms, including an in-house voice agent and a CleverTap-style engagement engine, so other teams could launch and tune journeys themselves.</li>
-              <li>Led 0 to 1 discovery and pilot execution for myCashFlo.AI, from design and user testing through QA.</li>
-              <li>Shipped AI Recon and regional invoice themes, then instrumented usage, A/B tests, WhatsApp nudges, and in-app tips to see what actually stuck.</li>
-              <li>Ran GTM and customer discovery across 300+ customers and 45+ SMBs to test demand, pricing, and partnerships.</li>
-            </ul>
-
-            <div class="encounters">
-              <article class="encounter reveal">
-                <p class="work-index">Encounter 01</p>
-                <h3>AI Recon</h3>
-                <p>
-                  A generative AI reconciliation tool that matches bank statements to invoices. It launched at <strong>75%+ accuracy</strong> and cut manual checks per statement by <strong>60%</strong>.
-                </p>
-              </article>
-              <article class="encounter reveal">
-                <p class="work-index">Encounter 02</p>
-                <h3>myCashFlo.AI</h3>
-                <p>
-                  An AI payment-collections product in discovery. Early testing shows a <strong>40% renewal rate</strong>, promise-to-pay capture up <strong>20%</strong>, and collection time down <strong>15%</strong>. The pilot reached 100+ users with a WhatsApp delivery rate above <strong>75%</strong>.
-                </p>
-              </article>
-              <article class="encounter reveal">
-                <p class="work-index">Encounter 03</p>
-                <h3>Invoice themes</h3>
-                <p>
-                  Auto-suggested seasonal and regional invoice themes. Template adoption grew <strong>40%</strong>, and repeat invoicing rose <strong>15%</strong> in the first week.
-                </p>
-              </article>
-              <article class="encounter reveal">
-                <p class="work-index">Encounter 04</p>
-                <h3>Onboarding and adoption</h3>
-                <p>
-                  Shared Ledgers cut adjustment tickets by <strong>30%</strong>. OCR invoice capture takes time off every bill. Onboarding drop-off fell <strong>18%</strong>. A/B tests and in-app nudges lifted trial-to-paid conversion by <strong>8 pp</strong> and repeat feature usage by <strong>10 pp</strong>. Cash Flow Discovery held a <strong>20–26% CTR</strong>.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="level" id="level-6" data-level data-title="Level 06: Side quests">
-          <div class="level-mark" aria-hidden="true"><span>06</span></div>
-          <div class="level-body">
-            <p class="status status-side">Side quests</p>
-            <h2>Journeys off the main path</h2>
-            <p class="reveal">
-              Product thinking, written down. From the Crework fellowship and the assignments on the resume. Each one opens the full write-up.
-            </p>
-
-            <article class="savana reveal" id="savana">
-              <p class="work-index">Main side quest · Fashion: D2C</p>
-              <h3>Savana</h3>
-              <p class="savana-deck">
-                How a digital-first fashion brand uses trend velocity, social commerce, and a mobile-first shop to win Gen Z’s attention in India’s D2C market.
-              </p>
-
-              <h4>Why Savana</h4>
-              <p>
-                Savana is where fashion retail in India is heading: a digital-first, Gen Z brand with a strong presence at home and a read on international trends. It is modern D2C plus tech-enabled fashion. Design, pricing psychology, and loyalty have to work as one system if growth is going to last.
-              </p>
-              <ul class="pillars">
-                <li><strong>Trend velocity:</strong> rapid design-to-launch cycles</li>
-                <li><strong>Social commerce:</strong> influencer-led discovery</li>
-                <li><strong>Mobile-first shopping:</strong> an app-centric experience</li>
-              </ul>
-
-              <h4>What Savana actually does</h4>
-              <div class="mini-grid">
-                <div class="mini">
-                  <strong>Fast fashion launch</strong>
-                  <p>Trend-led apparel inspired by global runways and social media, refreshed fast enough that the catalogue stays current.</p>
-                </div>
-                <div class="mini">
-                  <strong>Direct to consumer</strong>
-                  <p>Sold through the mobile app, without middlemen, so pricing stays competitive and the brand keeps the customer experience.</p>
-                </div>
-                <div class="mini">
-                  <strong>Data-driven discovery</strong>
-                  <p>Social, creators, and analytics decide which trends to chase, then targeted content creates the demand.</p>
-                </div>
-              </div>
-              <p class="savana-plain">In simple terms: Savana brings international runway and social trends to Indian shoppers quickly, and at a price they can pay.</p>
-
-              <h4>The problems it solves</h4>
-              <div class="mini-grid mini-grid-2">
-                <div class="mini">
-                  <strong>Trend lag</strong>
-                  <p>Trends move faster than traditional brands. By the time a store stocks the style, Gen Z has moved on.</p>
-                </div>
-                <div class="mini">
-                  <strong>Discovery mismatch</strong>
-                  <p>Offline retail does not match how this shopper finds clothes. Inspiration is on Instagram, Pinterest, and TikTok, not in a mall.</p>
-                </div>
-                <div class="mini">
-                  <strong>Access barriers</strong>
-                  <p>International fashion feels expensive, hard to import, or simply not available in India.</p>
-                </div>
-                <div class="mini">
-                  <strong>Style versus affordability</strong>
-                  <p>Affordable fashion in India often misses the trend. Premium brands have the design, and stay out of reach.</p>
-                </div>
-              </div>
-              <blockquote>“I want trendy, global-looking clothes that are affordable and easy to buy online.”</blockquote>
-
-              <h4>Who it is for</h4>
-              <p>
-                Gen Z and young millennials, about 18 to 30. Digital natives who expect the app to feel effortless. They care about being on trend and still shop inside a young Indian budget. They find looks through influencers on Instagram and Pinterest and want to recreate them.
-              </p>
-              <p class="savana-plain">The insight: Savana is not only selling clothes. It is selling identity, aspiration, and cultural relevance.</p>
-
-              <h4>What makes it a strong product</h4>
-              <div class="mini-grid">
-                <div class="mini">
-                  <strong>Trend velocity</strong>
-                  <p>Rapid design-to-launch, with a catalogue that mirrors Instagram, TikTok, and Pinterest in near real time. It feels current, not seasonal.</p>
-                </div>
-                <div class="mini">
-                  <strong>Mobile-first</strong>
-                  <p>Discovery, wishlist, checkout, and payment live in the app. Push notifications cover drops, offers, and restocks.</p>
-                </div>
-                <div class="mini">
-                  <strong>Coupons as product, not just marketing</strong>
-                  <p>A coupon is waiting almost every time the app opens. Predictable discounts lower checkout hesitation and create a small win before the purchase.</p>
-                </div>
-              </div>
-              <p>
-                Savana Club is the loyalty engine: Explorer, Enthusiast, Insider, then Icon. Icon perks include shopping rewards, member pricing, birthday surprises, VIP service, and “Get Me to US,” an aspirational travel hook.
-              </p>
-
-              <h4>The growth loop</h4>
-              <ol class="loop">
-                <li>Social discovery</li>
-                <li>App visit</li>
-                <li>Coupon-driven purchase</li>
-                <li>Club progression</li>
-                <li>Referrals</li>
-              </ol>
-              <p class="savana-plain">
-                Discovery leads to purchase, purchase builds loyalty, and loyalty brings the next user in. Discounts reduce friction. Tiers encourage the repeat. Satisfied customers refer without a paid ad.
-              </p>
-
-              <h4>What I would build next</h4>
-              <p>Standard delivery is about 21 days, which breaks the impulse that fashion depends on. The catalogue is also still focused on women.</p>
-              <div class="mini-grid">
-                <div class="mini">
-                  <strong>01: 60-minute express</strong>
-                  <p>Metro-first delivery for high-demand SKUs, through dark stores. Turn desire into something immediate.</p>
-                </div>
-                <div class="mini">
-                  <strong>02: Buy the Look</strong>
-                  <p>One tap to purchase a full influencer-curated outfit. Less decision fatigue, higher order value, and a direct line from the social post to the cart.</p>
-                </div>
-                <div class="mini">
-                  <strong>03: Men’s fashion</strong>
-                  <p>Start with capsule drops: streetwear, casual, party. Use influencers to test demand before a full expansion.</p>
-                </div>
-              </div>
-
-              <h4>Takeaway</h4>
-              <p>
-                Savana works because it solves global fashion access for budget-conscious Indian shoppers, it understands Gen Z, and it joins trends, pricing psychology, loyalty, and technology. It is not only selling clothes. It is selling being on trend, right now.
-              </p>
-              <ul class="pillars">
-                <li><strong>Return rate:</strong> where sizing, fit, or quality is hurting trust and margin</li>
-                <li><strong>Coupon usage:</strong> whether people stay for the discount or for the brand</li>
-                <li><strong>Referral-driven CAC:</strong> how referrals compare with paid acquisition</li>
-                <li><strong>Repeat purchase rate:</strong> whether each loyalty tier actually builds a habit</li>
-              </ul>
-              <a class="deck-link" href="cases/savana.pdf" target="_blank" rel="noopener noreferrer">Read the full deck</a>
-            </article>
-
-            <div class="study-grid">
-              <article class="study reveal">
-                <p class="work-index">Quest · Elders: AI</p>
-                <h3>Marzi Moments</h3>
-                <p>
-                  A daily companion ritual for people aged 55 to 75. Loneliness here is a lack of being noticed, not a lack of people. Emotional wellbeing has to come before health habits will stick.
-                </p>
-                <a href="https://balanced-nephew-874.notion.site/p/AI-Led-Daily-Joy-Value-for-Elders-2e236817787e8064bd3cf87818c572a1" target="_blank" rel="noopener noreferrer">Open quest</a>
-              </article>
-              <article class="study reveal">
-                <p class="work-index">Quest · with Bhavya and Aditi</p>
-                <h3>Peerlist</h3>
-                <p>
-                  Graduation project for a professional network in tech. The brief: raise daily active users 30% in a quarter and lift time per session 25%, starting from how people actually use the product today.
-                </p>
-                <a href="https://bhavyaaaxdesign.notion.site/Peerlist-x-Crework-Graduation-Project-1194afb99807805b81c3f6bcd02f07c4" target="_blank" rel="noopener noreferrer">Open quest</a>
-              </article>
-              <article class="study reveal">
-                <p class="work-index">Quest · Web3: growth</p>
-                <h3>Leap Wallet</h3>
-                <p>
-                  Growth channels for a crypto wallet: content and SEO, influencer affiliates, Discord and Reddit, email, paid, exchange partnerships, and workshops. Each channel has daily, weekly, and monthly metrics, and the download journey changes by source: social, ads, search, or direct.
-                </p>
-                <a href="cases/leap-wallet.pdf" target="_blank" rel="noopener noreferrer">Open quest</a>
-              </article>
-              <article class="study reveal">
-                <p class="work-index">Quest · Sales enablement</p>
-                <h3>White Panda</h3>
-                <p>
-                  Early-adopter research for Passion Bits (BlueTail). Whatfix is the starting fit: a global digital-adoption company whose sales teams need proof, training, and localized content. The short list then runs through SaaS, enterprise software, consulting, finance, healthcare, and manufacturing.
-                </p>
-                <a href="cases/white-panda.pdf" target="_blank" rel="noopener noreferrer">Open quest</a>
-              </article>
-              <article class="study reveal">
-                <p class="work-index">Quest · Edtech: growth</p>
-                <h3>Product Space</h3>
-                <p>
-                  Awareness and acquisition for a product-management course. Working professionals and students get separate personas, channels, and offers: LinkedIn and webinars on one side, campus ambassadors and a freemium path on the other. Success is reach, conversion, CAC, completion, and repeat enrollment.
-                </p>
-                <a href="cases/product-space.pdf" target="_blank" rel="noopener noreferrer">Open quest</a>
-              </article>
-              <article class="study reveal">
-                <p class="work-index">Quest · Fintech: PRD</p>
-                <h3>Slice bank statements</h3>
-                <p>
-                  A PRD to bring North East Small Finance Bank savings statements into the Slice app: view, download, search, categorize, and alerts. Rollout is internal testing, a four-week beta, then a full launch. Success is statement-section usage, regular access, and whether people find it usable.
-                </p>
-                <a href="cases/slice-bank-statements.pdf" target="_blank" rel="noopener noreferrer">Open quest</a>
-              </article>
-              <article class="study reveal">
-                <p class="work-index">Quest · Games</p>
-                <h3>Clash Rumble</h3>
-                <p>
-                  A roadmap for a new game in the Clash Royale mold, an art-asset model across a 9-month build and a 6-month soft launch, and a high-level design specification.
-                </p>
-                <a href="https://lime-polka-abf.notion.site/590c394bf07548b0806988695d4cdaca" target="_blank" rel="noopener noreferrer">Open quest</a>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="level level-gate" id="level-7" data-level data-title="Level 07: The gate">
-          <div class="level-mark" aria-hidden="true"><span>07</span></div>
-          <div class="level-body">
-            <p class="status status-gate">The gate is open</p>
-            <h2>Looking for the next level</h2>
-            <p class="reveal">
-              APM and PM roles. Someone who can sit with customers, write the spec, and still read the API.
-            </p>
-
-            <div class="about-grid">
-              <article class="panel reveal">
-                <h3>Kit</h3>
-                <p class="skill-label">Product and research</p>
-                <ul class="pills">
-                  <li>User interviews</li>
-                  <li>A/B testing</li>
-                  <li>Amplitude</li>
-                  <li>CleverTap</li>
-                  <li>Google Analytics</li>
-                  <li>Metabase</li>
-                  <li>Houseware</li>
-                  <li>Figma</li>
-                  <li>Whimsical</li>
-                </ul>
-                <p class="skill-label">From the engineering years</p>
-                <ul class="pills">
-                  <li>Java</li>
-                  <li>Python</li>
-                  <li>JavaScript</li>
-                  <li>TypeScript</li>
-                  <li>React</li>
-                  <li>Spring Boot</li>
-                  <li>MySQL</li>
-                  <li>MongoDB</li>
-                  <li>Kong</li>
-                  <li>Postman</li>
-                </ul>
-              </article>
-              <article class="panel panel-contact reveal">
-                <h3>Walk through</h3>
-                <ul class="contact-list">
-                  <li>
-                    <span>Email</span>
-                    <a href="mailto:aashikapm884@gmail.com">aashikapm884@gmail.com</a>
-                  </li>
-                  <li>
-                    <span>Phone</span>
-                    <a href="tel:+919871757442">+91 98717 57442</a>
-                  </li>
-                  <li>
-                    <span>LinkedIn</span>
-                    <a href="https://www.linkedin.com/in/aashika7" target="_blank" rel="noopener noreferrer">linkedin.com/in/aashika7</a>
-                  </li>
-                  <li>
-                    <span>Based in</span>
-                    <strong>Bangalore, India</strong>
-                  </li>
-                </ul>
-              </article>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <p>Aashika Singh · Product at FloBiz</p>
-      <a href="https://lime-polka-abf.notion.site/9a37559e352d484a8141e010d710416d" target="_blank" rel="noopener noreferrer">Notion resume</a>
-    </footer>
     <script src="script.js"></script>
   </body>
 </html>
